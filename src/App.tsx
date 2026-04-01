@@ -9,6 +9,7 @@ import { Header } from './components/ui/Header';
 import { TaskCard } from './components/ui/TaskCard';
 import { TaskModal } from './components/TaskModal';
 import { AddTaskModal } from './components/AddTaskModal';
+import HomePage from './components/HomePage';
 
 const App: React.FC = () => {
     const [tasks, setTasks] = useState<Task[]>([]);
@@ -233,6 +234,7 @@ const App: React.FC = () => {
                     onImport={handleImport}
                     onAddTask={() => setShowAddModal(true)}
                 />
+                <HomePage/>
 
                 {/* Список задач */}
                 <div className="flex flex-col gap-3">
